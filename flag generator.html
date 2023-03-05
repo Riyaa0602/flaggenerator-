@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div id="flag"></div>
+    
+
+</head>
+<body>
+    <script>
+    const flagContainer = document.getElementById("flag");
+
+const generateFlag = () => {
+  const flagColor1 = getRandomColor();
+  const flagColor2 = getRandomColor();
+  const flagColor3 = getRandomColor();
+
+  flagContainer.innerHTML = `
+    <div style="width: 1400px; height: 230px; background-color: ${flagColor1}; display: flex;"></div>
+    <div style="width: 1400px; height: 230px; background-color: ${flagColor2}; display: flex;"></div>
+    <div style="width: 1400px; height: 230px; background-color: ${flagColor3}; display: flex;"></div>
+  `;
+};
+
+const getRandomColor = () => {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+generateFlag();
+flagContainer.addEventListener("click", generateFlag);
+</script>
+</body>
+</html>
+<style>
+   body{
+        
+        background-color: black;
+    }
+   <style>
+body{
+<h1> GENERATE YOUR OWN PALATTE<</h1>
+}
+        
+
+</html>
